@@ -1,0 +1,4 @@
+click
+scipy
+numpy
+rasterio>=1.0

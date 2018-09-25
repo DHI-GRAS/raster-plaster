@@ -16,7 +16,7 @@ RESAMPLING_METHODS = [str(s).split('.')[1] for s in Resampling]
 @click.option('--resample-to', type=int, default=1,
               help='Which raster to resample to, if resolutions differ')
 @click.option('--resample-method', type=click.Choice(RESAMPLING_METHODS),
-              default='bilinear', show_default=True)
+              default='nearest', show_default=True)
 def cli(rasters, output, feather_radius=4, resample_to=1, resample_method='bilinear'):
     if 1 > resample_to > len(rasters):
         click.abort('--resample-to out of range')

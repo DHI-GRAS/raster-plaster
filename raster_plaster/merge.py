@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 def merge(datasets, bounds=None, res=None, precision=7, indexes=None,
-          resampling=Resampling.bilinear, nodata_out=np.nan, dtype=np.float32):
+          resampling=Resampling.nearest, nodata_out=np.nan, dtype=np.float32):
     """Copy valid pixels from input files to an output file.
 
     All files must have the same number of bands, data type, and

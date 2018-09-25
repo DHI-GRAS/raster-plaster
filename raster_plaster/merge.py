@@ -195,8 +195,6 @@ def merge(datasets, bounds=None, res=None, precision=7, indexes=None,
             temp_valid = ~temp.mask
         overlap = np.logical_and(region_valid, temp_valid)
         np.copyto(region, temp, where=temp_valid)
-        #plt.imshow(region[0])
-        #plt.show()
         feather(region, before, overlap, temp_valid)
 
     return dest, output_transform

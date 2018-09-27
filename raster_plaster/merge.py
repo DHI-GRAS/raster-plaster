@@ -14,9 +14,6 @@ from rasterio.transform import Affine
 from raster_plaster.feathering import feather
 
 
-import matplotlib.pyplot as plt
-
-
 logger = logging.getLogger(__name__)
 
 
